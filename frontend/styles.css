@@ -8,14 +8,12 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 .language-selector {
     position: absolute;
     top: 10px;
     right: 10px;
 }
-
-.login-container {
+.container, .login-container, .register-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -25,39 +23,35 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
-
+.hidden {
+    display: none;
+}
 .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
-
 .app-logo {
     width: 80px;
     height: auto;
     margin-bottom: 10px;
 }
-
 .logo-container h1 {
     font-size: 24px;
     margin: 0;
 }
-
-.login-container h2 {
+.login-container h2, .register-container h2 {
     margin-bottom: 20px;
 }
-
 .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 5px;
 }
-
 .form-group input {
     width: 100%;
     padding: 10px;
@@ -65,7 +59,9 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-
+.form-group input[type="password"] {
+    font-family: 'Courier New', Courier, monospace;
+}
 .form-group button {
     width: 100%;
     padding: 10px;
@@ -76,49 +72,42 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
-
-.form-group button:hover {
-    background-color: #218838;
+.form-group button.disabled {
+    background-color: #28a745;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
-
-.form-group .register-btn {
+.form-group .register-btn, .form-group .login-btn {
     background-color: #007bff;
 }
-
-.form-group .register-btn:hover {
+.form-group .register-btn:hover, .form-group .login-btn:hover {
     background-color: #0069d9;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .login-container {
+    .container, .login-container, .register-container {
         padding: 15px;
     }
-
     .app-logo {
         width: 60px;
     }
-
     .logo-container h1 {
         font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .login-container {
+    .container, .login-container, .register-container {
         padding: 10px;
     }
-
     .app-logo {
         width: 50px;
     }
-
     .logo-container h1 {
         font-size: 18px;
     }
-
-    .form-group input,
-    .form-group button {
+    .form-group input, .form-group button {
         padding: 8px;
         font-size: 14px;
     }

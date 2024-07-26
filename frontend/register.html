@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-selector">
+        <label for="language">Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+    <div class="register-container">
+        <div class="logo-container">
+            <img src="img/expense_tracker.png" alt="Expense Tracker Logo" class="app-logo">
+            <h1>Expense Tracker</h1>
+        </div>
+        <h2 id="register-header">Register</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="register-email" id="register-email-label">Email</label>
+                <input type="email" id="register-email" name="register-email" placeholder="youremail@example.com" required oninput="validateRegisterForm()">
+            </div>
+            <div class="form-group">
+                <label for="register-password" id="register-password-label">Password</label>
+                <input type="password" id="register-password" name="register-password" required oninput="validateRegisterForm()">
+            </div>
+            <div class="form-group">
+                <label for="register-confirm-password" id="register-confirm-password-label">Confirm Password</label>
+                <input type="password" id="register-confirm-password" name="register-confirm-password" required oninput="validateRegisterForm()">
+            </div>
+            <div class="form-group">
+                <button type="submit" id="register-button-submit" disabled class="disabled">Register</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="login-btn" id="login-btn" onclick="redirectToLogin()">Back to Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="language-selector">
+        <label for="language">Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="img/expense_tracker.png" alt="Expense Tracker Logo" class="app-logo">
+            <h1>Expense Tracker</h1>
+        </div>
+        <h2 id="login-header">Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="user" id="user-label">User</label>
+                <input type="text" id="user" name="user" required>
+            </div>
+            <div class="form-group">
+                <label for="password" id="password-label">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="login-button">Login</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="register-btn" id="register-button">Register</button>
+            </div>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
